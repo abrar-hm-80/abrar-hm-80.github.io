@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js");
+(function(){var t="dark";try{t=localStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+<title>Launchbench – Websites, CMS, e-commerce & mobile apps, fast-tracked</title>
+<meta name="description" content="We build websites, CMS platforms, online stores and mobile apps. Fast-track delivery in 1–4 weeks. Book a free project call.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f6f4; --ink:#10201a; --muted:#51635b; --card:#ffffff; --line:#d3ddd8;
+  --brand:#0b6b4f; --brand-ink:#ffffff; --pop:#ffd23f;
+  --fast-bg:#10201a; --fast-ink:#f3f6f4;
+}
+[data-theme="dark"]{
+  --bg:#0a110e;--ink:#e9f3ee;--muted:#9db3a8;--card:#111d17;--line:#223a2e;--brand:#3ddc97;--brand-ink:#06130c;--pop:#ffd23f;
+  --fast-bg:#0f2a1f;--fast-ink:#e9f3ee;color-scheme:dark}
+[data-theme="dark"] body{background:radial-gradient(900px 500px at 85% -5%,rgba(61,220,151,.14),transparent 60%),var(--bg)}
+[data-theme="dark"] .card:hover{box-shadow:0 0 0 1px var(--brand),0 10px 30px rgba(61,220,151,.12)}
+[data-theme="dark"] .btn.alt{border-color:var(--line)}
+[data-theme="dark"] .btn.alt:hover{border-color:var(--brand)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Instrument Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pop);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.3rem;text-decoration:none}
+.logo i{font-style:normal;color:var(--brand)}
+nav ul{display:flex;gap:22px;list-style:none;padding:0}
+nav ul a{text-decoration:none;font-size:.95rem;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:600}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.hero{padding:84px 0 70px}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:800;max-width:14ch}
+.hero p{max-width:52ch;color:var(--muted);font-size:1.15rem;margin:22px 0 30px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:3px solid var(--ink)}
+.timeline div{padding:16px 14px 0 0;position:relative}
+.timeline div::before{content:"";position:absolute;top:-9px;left:0;width:15px;height:15px;border-radius:50%;background:var(--pop);border:3px solid var(--ink)}
+.timeline b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;margin-top:8px}
+.timeline span{color:var(--muted);font-size:.92rem}
+section{padding:72px 0}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:56ch;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.card small{display:block;margin-top:14px;font-weight:600;color:var(--brand)}
+.fast{background:var(--fast-bg);color:var(--fast-ink)}
+.fast .lead{color:color-mix(in srgb,var(--fast-ink) 70%,transparent)}
+.fast .card{background:transparent;border-color:color-mix(in srgb,var(--fast-ink) 25%,transparent)}
+.fast .card p{color:color-mix(in srgb,var(--fast-ink) 72%,transparent)}
+.fast .card small{color:var(--pop)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:.92rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);width:100%}
+textarea{min-height:130px;resize:vertical}
+#msg{font-weight:600;min-height:1.5em}
+#cal{min-width:300px;height:680px;background:transparent}
+#cal iframe{border:0;background:transparent}
+[data-theme="dark"] #cal iframe{mix-blend-mode:screen}
+[data-theme="light"] #cal iframe{mix-blend-mode:multiply}
+.bookcard{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between;padding:30px;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--card) 45%,transparent);backdrop-filter:blur(8px)}
+.bk{list-style:none;padding:0;display:grid;gap:10px;font-weight:500}
+.bk li::before{content:"✓";color:var(--brand);font-weight:700;margin-right:10px}
+.bookcard .cta{display:flex;gap:12px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.92rem}
+.hp{position:absolute;left:-9999px}
+
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.hero-art svg{width:100%;height:auto;overflow:visible}
+.sc{fill:var(--card)}.si{fill:var(--ink)}.sb{fill:var(--brand)}.sp{fill:var(--pop)}.sl{fill:var(--line)}
+.st{stroke:var(--ink);stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.blob{fill:var(--brand);opacity:.13}
+.f1,.f2,.f3,.rocket{animation:float 6s ease-in-out infinite}
+.f2{animation-duration:7s;animation-delay:-2s}
+.f3{animation-duration:5s;animation-delay:-1s}
+.spark{animation:twinkle 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.spark:nth-of-type(2){animation-delay:-1.2s}
+@keyframes float{50%{transform:translateY(-12px)}}
+@keyframes twinkle{50%{transform:scale(.4);opacity:.4}}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hero-text h1{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-text p{animation:rise .8s .15s cubic-bezier(.2,.7,.2,1) both}
+.hero-text .cta{animation:rise .8s .3s cubic-bezier(.2,.7,.2,1) both}
+.hero-art{animation:rise 1s .2s cubic-bezier(.2,.7,.2,1) both}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.ico{width:52px;height:52px;margin-bottom:14px;fill:none;stroke:var(--brand);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s}
+.card{transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--brand)}
+.card:hover .ico{transform:rotate(-8deg) scale(1.12)}
+.btn{transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.fast .wrap{position:relative}
+.fast .rocket{position:absolute;right:22px;top:-10px;width:120px;opacity:.95}
+.timeline div::before{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.js .timeline div.rv:not(.in)::before{transform:scale(0)}
+
+.pv{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.pv figure{margin:0;padding:18px}
+.pv svg{width:100%;height:auto;display:block;margin-bottom:14px;overflow:visible}
+.pv figcaption h3{font-size:1.2rem;margin-bottom:4px}
+.tx{font:600 11px "Instrument Sans",system-ui,sans-serif;fill:var(--ink)}
+.txd,.txb{font:600 10.5px "Instrument Sans",system-ui,sans-serif}
+.txd{fill:#10201a}.txb{fill:var(--brand-ink)}
+.m-grow,.m-pop,.m-pulse,.m-press,.m-badge,.m-live,.m-ok{transform-box:fill-box;transform-origin:center}
+.m-grow{transform-origin:left center;animation:mgrow 7s ease-out infinite}
+.m-pop{animation:mpop 7s ease-out infinite}
+.m-pulse{animation:mpulse 2.4s ease-in-out infinite}
+.m-press{animation:mpress 7s infinite}
+.m-live{animation:mlive 7s ease-out infinite}
+.m-cur{animation:mcur 7s ease-in-out infinite}
+.m-fly{animation:mfly 6s ease-in infinite}
+.m-badge{animation:mbadge 6s ease-out infinite}
+.m-ok{animation:mok 6s ease-out infinite}
+.m-slide{animation:mslide 9s ease-in-out infinite}
+.m-note{animation:mnote 9s ease-out infinite}
+.m-d1{animation-delay:.25s}.m-d2{animation-delay:.5s}.m-d3{animation-delay:.75s}.m-d4{animation-delay:1s}
+@keyframes mgrow{0%{transform:scaleX(0)}18%,88%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes mpop{0%,20%{opacity:0;transform:translateY(10px)}35%,88%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes mpulse{50%{transform:scale(1.25)}}
+@keyframes mpress{0%,66%{transform:scale(1)}70%{transform:scale(.88)}76%,100%{transform:scale(1)}}
+@keyframes mlive{0%,76%{opacity:0;transform:scale(.6)}84%,94%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@keyframes mcur{0%,100%{transform:translate(70px,150px)}25%{transform:translate(110px,112px)}50%{transform:translate(250px,150px)}75%{transform:translate(240px,100px)}}
+@keyframes mfly{0%,15%{opacity:0;transform:translate(0,0) scale(1)}20%{opacity:1}50%{opacity:1;transform:translate(130px,-76px) scale(.5)}54%,100%{opacity:0}}
+@keyframes mbadge{0%,50%{transform:scale(0)}58%{transform:scale(1.35)}64%,92%{transform:scale(1)}100%{transform:scale(0)}}
+@keyframes mok{0%,62%{opacity:0;transform:translateY(8px)}72%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes mslide{0%,25%{transform:translateX(0)}33%,58%{transform:translateX(-84px)}66%,92%{transform:translateX(-168px)}100%{transform:translateX(0)}}
+@keyframes mnote{0%,10%{opacity:0;transform:translateX(-14px)}18%,62%{opacity:1;transform:none}72%,100%{opacity:0}}
+
+.dg{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.dash{padding:0!important;overflow:hidden}
+.dh{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid var(--line);font-weight:600;font-size:.93rem}
+.live{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--brand)}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand);animation:blink 1.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px 16px 4px}
+.kpi small{display:block;color:var(--muted);font-size:.8rem}
+.kpi b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.75rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.sk{padding:6px 16px 0}
+.chart{width:100%;height:110px;display:block;overflow:hidden}
+.chart .ar{fill:var(--brand);opacity:.15}
+.chart .ln,.chart .gr{vector-effect:non-scaling-stroke}
+.chart .ln{fill:none;stroke:var(--brand);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.chart .gr{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 4}
+.chart .dt{fill:var(--pop)}
+.feed{list-style:none;padding:12px 16px 16px;display:grid;gap:9px;font-size:.88rem;align-content:start;min-height:150px}
+.row{display:grid;grid-template-columns:64px 1fr 42px;gap:10px;align-items:center}
+.row em{font-style:normal;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--brand);border-radius:4px;transition:width 1s ease}
+.ord{display:flex;justify-content:space-between;gap:10px;animation:slidein .5s ease-out}
+.ord b{color:var(--brand);font-variant-numeric:tabular-nums}
+@keyframes slidein{from{opacity:0;transform:translateY(-8px)}}
+
+.dash.bg-web,.dash.bg-shop{background-size:cover;background-position:center;background-repeat:no-repeat;border-color:color-mix(in srgb,var(--brand) 35%,var(--line))}
+.dash.bg-web{background-image:
+  linear-gradient(color-mix(in srgb,var(--card) 80%,transparent),color-mix(in srgb,var(--card) 93%,transparent)),
+  url("images/analytics-bg.jpg"),
+  radial-gradient(circle at 20% 0%,rgba(61,220,151,.35),transparent 55%),radial-gradient(circle at 90% 100%,rgba(80,140,255,.25),transparent 55%)}
+.dash.bg-shop{background-image:
+  linear-gradient(color-mix(in srgb,var(--card) 80%,transparent),color-mix(in srgb,var(--card) 93%,transparent)),
+  url("images/store-bg.jpg"),
+  radial-gradient(circle at 80% 0%,rgba(255,210,63,.32),transparent 55%),radial-gradient(circle at 5% 100%,rgba(255,120,80,.22),transparent 55%)}
+.dash.bg-web .dh,.dash.bg-shop .dh{background:color-mix(in srgb,var(--card) 60%,transparent);backdrop-filter:blur(6px)}
+.dash:hover{transform:none!important;box-shadow:none}
+.note{color:var(--muted);font-size:.85rem;margin-top:18px}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.tools{display:flex;align-items:center;gap:12px}
+#theme,#lang{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:transform .3s,border-color .2s}
+#theme:hover,#lang:hover{border-color:var(--brand);transform:rotate(20deg)}
+#lang{font:700 .8rem "Instrument Sans",sans-serif}
+#lang:hover{transform:none}
+#theme svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+[data-theme="dark"] .i-moon,:root:not([data-theme="dark"]) .i-sun{display:none}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:380px}.fast .rocket{width:70px}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+}
+@media(max-width:820px){
+  nav ul{display:none}
+  .timeline{grid-template-columns:1fr 1fr;row-gap:30px}
+  .contact{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<header>
+  <div class="wrap"><nav aria-label="Main">
+    <a class="logo" href="#top">Launch<i>bench</i></a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#previews">Previews</a></li>
+      <li><a href="#dashboards">Dashboards</a></li>
+      <li><a href="#fasttrack">Fast-track</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="tools">
+      <button id="lang" type="button" aria-label="Passer en français">FR</button>
+      <button id="theme" type="button" aria-label="Switch between dark and light theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 13A9 9 0 1111 3a7 7 0 0010 10z"/></svg>
+      </button>
+      <a class="btn" href="#book">Book a call</a>
+    </div>
+  </nav></div>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <div class="hero-grid"><div class="hero-text">
+  <h1>Your site or app, live in weeks.</h1>
+  <p>We design and build websites, CMS platforms, online stores and mobile apps. Pick the fast-track option and get a working version in as little as 7 days.</p>
+  <div class="cta">
+    <a class="btn" href="#book">Book a free project call</a>
+    <a class="btn alt" href="#contact">Send a message</a>
+  </div>
+  </div><div class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 480 400"><circle class="blob" cx="240" cy="205" r="185"/>
+<g class="f1"><rect class="sc st" x="30" y="50" width="310" height="215" rx="14"/>
+<path class="sl st" d="M30 90h310"/><circle class="sp" cx="54" cy="70" r="6"/><circle class="sb" cx="74" cy="70" r="6"/><circle class="sl" cx="94" cy="70" r="6"/>
+<rect class="sb" x="52" y="108" width="170" height="64" rx="8"/><rect class="sp" x="68" y="124" width="90" height="10" rx="5"/><rect class="sc" x="68" y="144" width="130" height="8" rx="4"/>
+<rect class="sl" x="238" y="108" width="84" height="64" rx="8"/>
+<rect class="sl" x="52" y="190" width="84" height="56" rx="8"/><rect class="sl" x="148" y="190" width="84" height="56" rx="8"/><rect class="sl" x="244" y="190" width="78" height="56" rx="8"/></g>
+<g class="f2"><rect class="si" x="296" y="110" width="132" height="250" rx="24"/><rect class="sc" x="306" y="128" width="112" height="214" rx="14"/>
+<rect class="sb" x="316" y="140" width="92" height="12" rx="6"/>
+<rect class="sl" x="316" y="164" width="42" height="50" rx="8"/><rect class="sl" x="366" y="164" width="42" height="50" rx="8"/>
+<rect class="sl" x="316" y="222" width="42" height="50" rx="8"/><rect class="sl" x="366" y="222" width="42" height="50" rx="8"/>
+<rect class="sp" x="316" y="296" width="92" height="30" rx="15"/></g>
+<g class="f3"><circle class="sp st" cx="110" cy="322" r="38"/>
+<path d="M90 306h8l7 22h20l6-16h-30" fill="none" class="st"/><circle class="si" cx="106" cy="336" r="3.5"/><circle class="si" cx="128" cy="336" r="3.5"/></g>
+<path class="spark sp" d="M420 50l6 14 14 6-14 6-6 14-6-14-14-6 14-6z"/>
+<path class="spark sb" d="M44 330l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/>
+</svg></div></div>
+  <div class="timeline" aria-label="Typical fast-track timeline">
+    <div><b>Day 1</b><span>Free call, scope agreed</span></div>
+    <div><b>Day 2</b><span>Design preview</span></div>
+    <div><b>Day 5</b><span>Working version to test</span></div>
+    <div><b>Day 7+</b><span>Launch and handover</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What we build</h2>
+    <p class="lead">One team for the whole project, from first sketch to launch and support.</p>
+    <div class="grid">
+      <article class="card"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="30" rx="4"/><path d="M6 17h36M14 26h12M14 32h20"/></svg><h3>Websites</h3><p>Fast, responsive sites for businesses, portfolios and landing pages, optimised for search and mobile.</p><small>From 1 week</small></article>
+            <article class="card"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 8h6l5 22h22l4-15H14"/><circle cx="19" cy="38" r="3"/><circle cx="35" cy="38" r="3"/></svg><h3>E-commerce</h3><p>Online stores with product catalogue, secure payments, shipping rules and stock management (Shopify, WooCommerce or custom).</p><small>From 3 weeks</small></article>
+      <article class="card"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="13" y="5" width="22" height="38" rx="5"/><path d="M21 37h6M19 12h10M19 19h10"/></svg><h3>Mobile apps</h3><p>iOS and Android apps built once with Flutter or React Native, published to both stores.</p><small>From 4 weeks</small></article>
+    </div>
+  </div>
+</section>
+
+<section id="previews">
+  <div class="wrap">
+    <h2>Live design previews</h2>
+    <p class="lead">A look at how each type of project is built, animated in real time.</p>
+    <div class="grid pv">
+<figure class="card"><svg viewBox="0 0 320 190" role="img" aria-label="Animated website design preview">
+<rect class="sc st" x="10" y="10" width="300" height="170" rx="10"/><path class="st" fill="none" d="M10 36h300"/>
+<circle class="sp" cx="24" cy="23" r="4.5"/><circle class="sb" cx="38" cy="23" r="4.5"/><circle class="sl" cx="52" cy="23" r="4.5"/>
+<rect class="sl" x="24" y="46" width="44" height="8" rx="4"/><rect class="sl" x="232" y="46" width="22" height="8" rx="4"/><rect class="sl" x="260" y="46" width="22" height="8" rx="4"/>
+<rect class="sb" x="24" y="64" width="184" height="58" rx="6"/>
+<rect class="sp m-grow" x="36" y="76" width="100" height="8" rx="4"/><rect class="sc m-grow m-d1" x="36" y="92" width="136" height="6" rx="3"/><rect class="sp m-pop m-d2" x="36" y="106" width="40" height="10" rx="5"/>
+<rect class="sl" x="218" y="64" width="78" height="58" rx="6"/><circle class="sp m-pulse" cx="257" cy="93" r="14"/>
+<rect class="sl m-pop m-d1" x="24" y="134" width="86" height="34" rx="6"/><rect class="sl m-pop m-d2" x="118" y="134" width="86" height="34" rx="6"/><rect class="sl m-pop m-d3" x="212" y="134" width="84" height="34" rx="6"/>
+<path class="m-cur si" stroke="#fff" stroke-width="1" d="M0 0v14l4-4 3 7 3-1-3-7h6z"/></svg><figcaption><h3>Websites</h3><p>Pages come together on screen: layout, content and calls to action.</p></figcaption></figure>
+<figure class="card"><svg viewBox="0 0 320 190" role="img" aria-label="Animated online store preview">
+<rect class="sc st" x="10" y="10" width="300" height="170" rx="10"/><path class="st" fill="none" d="M10 36h300"/>
+<rect class="sl" x="24" y="19" width="60" height="9" rx="4.5"/>
+<path class="st" fill="none" style="stroke-width:2" d="M258 18h5l3 11h14l3-8h-19"/><circle class="si" cx="268" cy="32" r="1.8"/><circle class="si" cx="279" cy="32" r="1.8"/>
+<circle class="sb m-badge" cx="288" cy="17" r="8"/><text class="txb m-badge" x="288" y="20.5" text-anchor="middle">1</text>
+<rect class="sl" x="24" y="44" width="84" height="64" rx="6"/><circle class="sb" cx="66" cy="76" r="17"/>
+<rect class="sl" x="118" y="44" width="84" height="64" rx="6"/><rect class="sp m-pulse" x="144" y="62" width="32" height="28" rx="6"/>
+<rect class="sl" x="212" y="44" width="84" height="64" rx="6"/><path class="sb" d="M254 60l16 28h-32z"/>
+<rect class="si" x="24" y="114" width="40" height="6" rx="3"/><rect class="si" x="118" y="114" width="40" height="6" rx="3"/><rect class="si" x="212" y="114" width="40" height="6" rx="3"/>
+<g class="m-press"><rect class="sp" x="118" y="128" width="84" height="20" rx="10"/><text class="txd" x="160" y="141.5" text-anchor="middle">Add to cart</text></g>
+<g class="m-ok"><rect class="sb" x="24" y="154" width="272" height="18" rx="9"/><text class="txb" x="160" y="166.5" text-anchor="middle">✓ Order confirmed</text></g>
+<circle class="sp m-fly" opacity="0" cx="160" cy="76" r="9"/></svg><figcaption><h3>E-commerce</h3><p>From product page to cart to confirmed order.</p></figcaption></figure>
+<figure class="card"><svg viewBox="0 0 320 190" role="img" aria-label="Animated mobile app preview">
+<clipPath id="pc"><rect x="118" y="18" width="84" height="156" rx="10"/></clipPath>
+<rect class="si" x="110" y="6" width="100" height="180" rx="18"/><rect class="sc" x="118" y="18" width="84" height="156" rx="10"/>
+<g clip-path="url(#pc)"><g class="m-slide">
+<rect class="sb" x="118" y="18" width="84" height="26"/><rect class="sp" x="126" y="27" width="40" height="8" rx="4"/>
+<rect class="sl" x="126" y="52" width="32" height="40" rx="5"/><rect class="sl" x="162" y="52" width="32" height="40" rx="5"/><rect class="sl" x="126" y="98" width="32" height="40" rx="5"/><rect class="sl" x="162" y="98" width="32" height="40" rx="5"/><rect class="sp" x="126" y="146" width="68" height="20" rx="10"/>
+<rect class="sb" x="202" y="18" width="84" height="26"/><rect class="sp" x="210" y="27" width="40" height="8" rx="4"/>
+<circle class="sb" cx="218" cy="62" r="7"/><rect class="sl" x="230" y="58" width="48" height="8" rx="4"/><circle class="sb" cx="218" cy="88" r="7"/><rect class="sl" x="230" y="84" width="48" height="8" rx="4"/><circle class="sb" cx="218" cy="114" r="7"/><rect class="sl" x="230" y="110" width="48" height="8" rx="4"/><circle class="sb" cx="218" cy="140" r="7"/><rect class="sl" x="230" y="136" width="48" height="8" rx="4"/>
+<rect class="sb" x="286" y="18" width="84" height="26"/><rect class="sp" x="294" y="27" width="40" height="8" rx="4"/>
+<rect class="sl" x="296" y="110" width="12" height="40" rx="3"/><rect class="sb" x="314" y="86" width="12" height="64" rx="3"/><rect class="sl" x="332" y="100" width="12" height="50" rx="3"/><rect class="sp" x="350" y="64" width="12" height="86" rx="3"/>
+</g></g>
+<g class="m-note"><rect class="sp" x="14" y="44" width="84" height="28" rx="8"/><text class="txd" x="56" y="62" text-anchor="middle">New order</text></g>
+<g class="f1"><rect class="sc st" x="222" y="52" width="66" height="24" rx="12" style="stroke-width:2"/><text class="tx" x="255" y="68" text-anchor="middle">iOS</text></g>
+<g class="f2"><rect class="sc st" x="222" y="92" width="66" height="24" rx="12" style="stroke-width:2"/><text class="tx" x="255" y="108" text-anchor="middle">Android</text></g></svg><figcaption><h3>Mobile apps</h3><p>One app for iOS and Android, with live notifications.</p></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="dashboards">
+  <div class="wrap">
+    <h2>Real-time dashboards</h2>
+    <p class="lead">Every project can include a live dashboard so you see visitors, sales and app usage as they happen.</p>
+    <div class="grid dg">
+<article class="card dash bg-web" id="d-web"><div class="dh">Website analytics<span class="live">Live</span></div><div class="kpis"><div class="kpi"><small>Visitors online</small><b data-k="v">152</b></div><div class="kpi"><small>Page views / min</small><b data-k="pv">84</b></div></div><div class="sk"><svg class="chart" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true"></svg></div><ul class="feed" data-k="feed"><li class="row"><span>/home</span><div class="bar"><i style="width:48%"></i></div><em>48%</em></li><li class="row"><span>/pricing</span><div class="bar"><i style="width:27%"></i></div><em>27%</em></li><li class="row"><span>/blog</span><div class="bar"><i style="width:16%"></i></div><em>16%</em></li></ul></article><article class="card dash bg-shop" id="d-shop"><div class="dh">Store dashboard<span class="live">Live</span></div><div class="kpis"><div class="kpi"><small>Revenue today</small><b data-k="rev">€1 840</b></div><div class="kpi"><small>Orders today</small><b data-k="ord">26</b></div></div><div class="sk"><svg class="chart" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true"></svg></div><ul class="feed" data-k="feed"><li class="ord"><span>#1066 · Backpack, Lyon</span><b>€74</b></li><li class="ord"><span>#1065 · Desk lamp, Paris</span><b>€39</b></li><li class="ord"><span>#1064 · Headphones, Lille</span><b>€129</b></li></ul></article><article class="card dash" id="d-app"><div class="dh">Mobile app analytics<span class="live">Live</span></div><div class="kpis"><div class="kpi"><small>Active users</small><b data-k="au">840</b></div><div class="kpi"><small>Installs today</small><b data-k="in">132</b></div></div><div class="sk"><svg class="chart" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true"></svg></div><ul class="feed" data-k="feed"><li class="row"><span>iOS</span><div class="bar"><i style="width:54%"></i></div><em>54%</em></li><li class="row"><span>Android</span><div class="bar"><i style="width:46%"></i></div><em>46%</em></li><li class="ord"><span>Crash-free sessions</span><b><span data-k="cf">99.80%</span></b></li></ul></article>
+    </div>
+    <p class="note">Demo data, simulated to show what your own dashboard can look like.</p>
+  </div>
+</section>
+
+<section id="fasttrack" class="fast">
+  <div class="wrap"><svg class="rocket" viewBox="0 0 100 130" aria-hidden="true"><path d="M50 8c18 16 22 44 14 72H36C28 52 32 24 50 8z" fill="#f3f6f4" stroke="#ffd23f" stroke-width="4" stroke-linejoin="round"/><circle cx="50" cy="44" r="9" fill="#ffd23f"/><path d="M36 66L18 92l20-6zM64 66l18 26-20-6z" fill="#ffd23f"/><path d="M42 84c2 18 4 28 8 38 4-10 6-20 8-38z" fill="#ff8a3d"/></svg>
+    <h2>Fast-track service</h2>
+    <p class="lead">Need to launch for a deadline, an event or a season? Fast-track gives your project a priority slot and a fixed scope.</p>
+    <div class="grid">
+      <div class="card"><h3>Priority start</h3><p>Your project begins within 48 hours of the discovery call.</p></div>
+      <div class="card"><h3>Fixed scope and price</h3><p>You know the cost and the delivery date before we write a line of code.</p></div>
+      <div class="card"><h3>Daily updates</h3><p>A short progress note every working day, plus a live preview link.</p></div>
+      <div class="card"><h3>Launch support</h3><p>30 days of free fixes after go-live.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2>Book a project discussion</h2>
+    <p class="lead">Pick a time that suits you. The call is free, lasts 30 minutes and ends with a clear plan and estimate.</p>
+    <div id="cal"></div>
+    <noscript><p><a href="https://calendly.com/hm-abrar-ahmed/new-meeting">Open the booking page</a></p></noscript>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>Prefer to write to us?</h2>
+      <p class="lead">Tell us what you need. We reply within one working day with questions or a first estimate.</p>
+      <p><a href="mailto:hello@your-domain.com"><strong>hello@your-domain.com</strong></a></p>
+    </div>
+    <!-- Replace YOUR_FORM_ID with your Formspree form ID (free at formspree.io) -->
+    <form id="cf" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Project type
+        <select name="type">
+          <option>Website</option><option>E-commerce store</option><option>Mobile app</option><option>Not sure yet</option>
+        </select>
+      </label>
+      <label>Timeline
+        <select name="timeline">
+          <option>Fast-track (under 2 weeks)</option><option>1–2 months</option><option>Flexible</option>
+        </select>
+      </label>
+      <label>Message<textarea name="message" required></textarea></label>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Send message</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Launchbench. All rights reserved.</div></footer>
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+
+
+let lang='en';
+try{const q=new URLSearchParams(location.search).get('lang');lang=(q==='fr'||q==='en')?q:(localStorage.getItem('lang')||((navigator.language||'en').toLowerCase().startsWith('fr')?'fr':'en'))}catch(e){}
+const D={"30-minute call":"Appel de 30 minutes","Free, no commitment":"Gratuit et sans engagement","Clear plan and estimate":"Plan clair et estimation","Choose a time":"Choisir un créneau","Open in a new tab":"Ouvrir dans un nouvel onglet","Services": "Services", "Previews": "Aperçus", "Dashboards": "Tableaux de bord", "Fast-track": "Express", "Contact": "Contact", "Book a call": "Réserver un appel", "Your site or app, live in weeks.": "Votre site ou application en ligne en quelques semaines.", "We design and build websites, CMS platforms, online stores and mobile apps. Pick the fast-track option and get a working version in as little as 7 days.": "Nous concevons et développons des sites web, des CMS, des boutiques en ligne et des applications mobiles. Choisissez l’option express et obtenez une version fonctionnelle en seulement 7 jours.", "Book a free project call": "Réserver un appel projet gratuit", "Send a message": "Envoyer un message", "Day 1": "Jour 1", "Day 2": "Jour 2", "Day 5": "Jour 5", "Day 7+": "Jour 7+", "Free call, scope agreed": "Appel gratuit, périmètre validé", "Design preview": "Aperçu du design", "Working version to test": "Version fonctionnelle à tester", "Launch and handover": "Lancement et livraison", "What we build": "Ce que nous créons", "One team for the whole project, from first sketch to launch and support.": "Une seule équipe pour tout le projet, de la première maquette au lancement et au support.", "Websites": "Sites web", "Fast, responsive sites for businesses, portfolios and landing pages, optimised for search and mobile.": "Des sites rapides et responsives pour les entreprises, portfolios et pages de destination, optimisés pour le référencement et le mobile.", "From 1 week": "À partir de 1 semaine", "From 2 weeks": "À partir de 2 semaines", "From 3 weeks": "À partir de 3 semaines", "From 4 weeks": "À partir de 4 semaines", "CMS platforms": "Plateformes CMS", "Edit pages, posts and media yourself. We set up WordPress, Strapi or a headless CMS that fits your team.": "Modifiez vous-même vos pages, articles et médias. Nous installons WordPress, Strapi ou un CMS headless adapté à votre équipe.", "E-commerce": "E-commerce", "Online stores with product catalogue, secure payments, shipping rules and stock management (Shopify, WooCommerce or custom).": "Boutiques en ligne avec catalogue produits, paiements sécurisés, règles de livraison et gestion des stocks (Shopify, WooCommerce ou sur mesure).", "Mobile apps": "Applications mobiles", "iOS and Android apps built once with Flutter or React Native, published to both stores.": "Applications iOS et Android développées une seule fois avec Flutter ou React Native, publiées sur les deux stores.", "Live design previews": "Aperçus de design en direct", "A look at how each type of project is built, animated in real time.": "Découvrez comment chaque type de projet prend forme, animé en temps réel.", "Pages come together on screen: layout, content and calls to action.": "Les pages se construisent à l’écran : mise en page, contenu et appels à l’action.", "Publish": "Publier", "✓ Live": "✓ En ligne", "Write, edit and publish content yourself, with no developer needed.": "Rédigez, modifiez et publiez vos contenus vous-même, sans développeur.", "Add to cart": "Ajouter au panier", "✓ Order confirmed": "✓ Commande confirmée", "From product page to cart to confirmed order.": "De la fiche produit au panier, jusqu’à la commande confirmée.", "New order": "Nouvelle commande", "One app for iOS and Android, with live notifications.": "Une seule application pour iOS et Android, avec notifications en direct.", "Real-time dashboards": "Tableaux de bord en temps réel", "Every project can include a live dashboard so you see visitors, sales and app usage as they happen.": "Chaque projet peut inclure un tableau de bord en direct pour suivre visiteurs, ventes et usage de l’application en temps réel.", "Website analytics": "Statistiques du site", "Live": "En direct", "Visitors online": "Visiteurs en ligne", "Page views / min": "Pages vues / min", "Store dashboard": "Tableau de bord boutique", "Revenue today": "Chiffre d’affaires du jour", "Orders today": "Commandes du jour", "Mobile app analytics": "Statistiques de l’application", "Active users": "Utilisateurs actifs", "Installs today": "Installations du jour", "Crash-free sessions": "Sessions sans plantage", "#1066 · Backpack, Lyon": "#1066 · Sac à dos, Lyon", "#1065 · Desk lamp, Paris": "#1065 · Lampe de bureau, Paris", "#1064 · Headphones, Lille": "#1064 · Casque audio, Lille", "€74": "74 €", "€39": "39 €", "€129": "129 €", "Demo data, simulated to show what your own dashboard can look like.": "Données de démonstration, simulées pour montrer à quoi peut ressembler votre propre tableau de bord.", "Fast-track service": "Service express", "Need to launch for a deadline, an event or a season? Fast-track gives your project a priority slot and a fixed scope.": "Besoin de lancer pour une échéance, un événement ou une saison ? Le service express réserve à votre projet un créneau prioritaire et un périmètre fixe.", "Priority start": "Démarrage prioritaire", "Your project begins within 48 hours of the discovery call.": "Votre projet démarre dans les 48 heures suivant l’appel de découverte.", "Fixed scope and price": "Périmètre et prix fixes", "You know the cost and the delivery date before we write a line of code.": "Vous connaissez le coût et la date de livraison avant que nous écrivions la moindre ligne de code.", "Daily updates": "Suivi quotidien", "A short progress note every working day, plus a live preview link.": "Un court point d’avancement chaque jour ouvré, avec un lien d’aperçu en direct.", "Launch support": "Support au lancement", "30 days of free fixes after go-live.": "30 jours de corrections gratuites après la mise en ligne.", "Book a project discussion": "Réserver un échange sur votre projet", "Pick a time that suits you. The call is free, lasts 30 minutes and ends with a clear plan and estimate.": "Choisissez un créneau qui vous convient. L’appel est gratuit, dure 30 minutes et se termine par un plan clair et une estimation.", "Open the booking page": "Ouvrir la page de réservation", "Prefer to write to us?": "Vous préférez nous écrire ?", "Tell us what you need. We reply within one working day with questions or a first estimate.": "Dites-nous ce dont vous avez besoin. Nous répondons sous un jour ouvré avec des questions ou une première estimation.", "Name": "Nom", "Email": "E-mail", "Project type": "Type de projet", "Website": "Site web", "CMS platform": "Plateforme CMS", "E-commerce store": "Boutique e-commerce", "Mobile app": "Application mobile", "Not sure yet": "Pas encore sûr", "Timeline": "Délai", "Fast-track (under 2 weeks)": "Express (moins de 2 semaines)", "1–2 months": "1 à 2 mois", "Flexible": "Flexible", "Message": "Message", "Send message": "Envoyer le message", "Launchbench. All rights reserved.": "Launchbench. Tous droits réservés.", "Sending…": "Envoi en cours…", "Thanks, your message was sent. We reply within one working day.": "Merci, votre message a été envoyé. Nous répondons sous un jour ouvré.", "Sending failed. Please email us directly.": "Échec de l’envoi. Écrivez-nous directement par e-mail.", "Network error. Please email us directly.": "Erreur réseau. Écrivez-nous directement par e-mail.", "Main": "Principal", "Switch between dark and light theme": "Passer du thème sombre au thème clair", "Typical fast-track timeline": "Calendrier express type", "Animated website design preview": "Aperçu animé du design d’un site web", "Animated CMS editor preview": "Aperçu animé d’un éditeur CMS", "Animated online store preview": "Aperçu animé d’une boutique en ligne", "Animated mobile app preview": "Aperçu animé d’une application mobile"};
+const T={en:{title:document.title,desc:document.querySelector('meta[name="description"]').content},
+fr:{title:'Launchbench – Sites web, CMS, e-commerce et applications mobiles, livrés en accéléré',desc:'Nous créons des sites web, des CMS, des boutiques en ligne et des applications mobiles. Livraison accélérée en 1 à 4 semaines. Réservez un appel projet gratuit.'}};
+const has=k=>Object.prototype.hasOwnProperty.call(D,k);
+const t=k=>lang==='fr'&&has(k)?D[k]:k;
+function applyLang(l){
+  lang=l;document.documentElement.lang=l;
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
+  while(n=w.nextNode()){
+    if(n.parentNode.closest('script,style'))continue;
+    const m=n.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/),key=n.__en||m[2];
+    if(!key||!has(key))continue;
+    n.__en=key;n.nodeValue=m[1]+t(key)+m[3];
+  }
+  document.querySelectorAll('[aria-label]').forEach(e=>{const k=e.__al||e.getAttribute('aria-label');if(has(k)){e.__al=k;e.setAttribute('aria-label',t(k))}});
+  document.title=T[l].title;document.querySelector('meta[name="description"]').content=T[l].desc;
+  const b=document.getElementById('lang');b.textContent=l==='fr'?'EN':'FR';b.setAttribute('aria-label',l==='fr'?'Switch to English':'Passer en français');
+}
+document.getElementById('lang').addEventListener('click',()=>{const l=lang==='fr'?'en':'fr';applyLang(l);try{localStorage.setItem('lang',l)}catch(e){}});
+applyLang(lang);
+const els=document.querySelectorAll('section h2,.lead,.card,.timeline div,form');
+els.forEach(el=>{el.classList.add('rv');const i=[...el.parentNode.children].indexOf(el);el.style.transitionDelay=(i%4)*90+'ms'});
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  els.forEach(el=>io.observe(el));
+}else els.forEach(el=>el.classList.add('in'));
+document.getElementById('theme').addEventListener('click',()=>{
+  const r=document.documentElement,n=r.getAttribute('data-theme')==='dark'?'light':'dark';
+  r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}initCal();
+});
+
+(function(){
+const r=(a,b)=>Math.round(a+Math.random()*(b-a)),cl=(v,a,b)=>Math.min(b,Math.max(a,v));
+const fmt=n=>n.toLocaleString(lang==='fr'?'fr-FR':'en-GB'),money=n=>lang==='fr'?fmt(n)+'\u00a0€':'€'+fmt(n);
+const W=document.getElementById('d-web'),S=document.getElementById('d-shop'),A=document.getElementById('d-app');
+const k=(root,n)=>root.querySelector('[data-k="'+n+'"]');
+const CH=new Map(),STEP=1800;
+function setChart(root,arr,mn,mx){CH.set(root,{arr:arr.slice(),mn,mx,t0:performance.now()})}
+function drawChart(root,c,now){
+  const w=300,h=110,n=c.arr.length,sx=w/(n-3),e=Math.min(1,(now-c.t0)/STEP);
+  const Y=v=>h-cl((v-c.mn)/(c.mx-c.mn),0,1)*h;
+  const pts=[];
+  for(let i=0;i<n-1;i++)pts.push([w-(n-1-i)*sx+(1-e)*sx,Y(c.arr[i])]);
+  const ey=Y(c.arr[n-2]+(c.arr[n-1]-c.arr[n-2])*e);
+  pts.push([w,ey]);
+  const l=pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+  root.querySelector('.chart').innerHTML='<path class="gr" d="M0 27.5H300M0 55H300M0 82.5H300"/><polygon class="ar" points="'+pts[0][0].toFixed(1)+','+h+' '+l+' '+w+','+h+'"/><polyline class="ln" points="'+l+'"/><circle class="dt" cx="'+w+'" cy="'+cl(ey,4,h-4).toFixed(1)+'" r="4"/>';
+}
+(function loop(now){CH.forEach((c,root)=>drawChart(root,c,now));requestAnimationFrame(loop)})(performance.now());
+function rows(root,vals){root.querySelectorAll('.row').forEach((li,i)=>{li.querySelector('i').style.width=vals[i]+'%';li.querySelector('em').textContent=vals[i]+'%'})}
+const series=(c,m,d)=>Array.from({length:c},()=>r(m-d,m+d));
+let wv=150,ws=series(30,150,40),pg=[48,27,16];
+let rev=1840,on=26,ss=series(30,70,25);
+let au=840,as=series(30,840,100),inst=132,ios=54;
+const cities=['Paris','Lyon','Marseille','Lille','Nantes','Toulouse','Bordeaux'],itemsL={en:['Backpack','Desk lamp','Headphones','Sneakers','Water bottle','Notebook'],fr:['Sac à dos','Lampe de bureau','Casque audio','Baskets','Gourde','Carnet']};
+function addOrder(){
+  const a=r(19,189);rev+=a;on++;
+  const li=document.createElement('li');li.className='ord';
+  li.innerHTML='<span>#'+(1040+on)+' · '+itemsL[lang][r(0,5)]+', '+cities[r(0,6)]+'</span><b>'+money(a)+'</b>';
+  const ul=k(S,'feed');ul.prepend(li);while(ul.children.length>4)ul.lastChild.remove();
+}
+function tick(){
+  if(document.hidden)return;
+  wv=cl(wv+r(-25,25),80,270);ws.push(wv);ws.shift();setChart(W,ws,60,280);
+  k(W,'v').textContent=wv;k(W,'pv').textContent=Math.round(wv*.55);
+  pg=pg.map(x=>cl(x+r(-3,3),8,70));rows(W,pg);
+  if(Math.random()<.65)addOrder();
+  ss.push(cl(ss[ss.length-1]+r(-35,35),20,180));ss.shift();setChart(S,ss,0,200);k(S,'rev').textContent=money(rev);k(S,'ord').textContent=on;
+  au=cl(au+r(-60,60),560,1150);as.push(au);as.shift();setChart(A,as,500,1200);
+  k(A,'au').textContent=fmt(au);inst+=r(0,2);k(A,'in').textContent=inst;
+  ios=cl(ios+r(-1,1),48,60);rows(A,[ios,100-ios]);
+  k(A,'cf').textContent=(99.6+Math.random()*.35).toFixed(2)+'%';
+}
+tick();setInterval(tick,1800);
+})();
+
+(function(){
+const c=document.getElementById('bg'),x=c.getContext('2d');
+const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let W,H,P=[],m={x:-999,y:-999},rgb='61,220,151',f=0;
+function col(){const h=getComputedStyle(document.documentElement).getPropertyValue('--brand').trim().replace('#','');if(h.length===6)rgb=[0,2,4].map(i=>parseInt(h.substr(i,2),16)).join(',')}
+function size(){
+  const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;
+  c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+  const n=Math.min(90,Math.round(W*H/17000));
+  while(P.length<n)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.45,vy:(Math.random()-.5)*.45,r:Math.random()*1.8+.8});
+  P.length=n;if(still)draw();
+}
+function draw(){
+  if(f++%60===0)col();
+  x.clearRect(0,0,W,H);
+  for(const p of P){
+    if(!still){
+      const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy);
+      if(d<120&&d>0){p.x+=dx/d*1.2;p.y+=dy/d*1.2}
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<-10)p.x=W+10;else if(p.x>W+10)p.x=-10;
+      if(p.y<-10)p.y=H+10;else if(p.y>H+10)p.y=-10;
+    }
+  }
+  for(let i=0;i<P.length;i++){
+    const a=P[i];
+    x.fillStyle='rgba('+rgb+',.65)';x.beginPath();x.arc(a.x,a.y,a.r,0,6.283);x.fill();
+    for(let j=i+1;j<P.length;j++){
+      const b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+      if(d<115){x.strokeStyle='rgba('+rgb+','+(.28*(1-d/115)).toFixed(3)+')';x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}
+    }
+    const dm=Math.hypot(a.x-m.x,a.y-m.y);
+    if(dm<150){x.strokeStyle='rgba(255,210,63,'+(.45*(1-dm/150)).toFixed(3)+')';x.beginPath();x.moveTo(a.x,a.y);x.lineTo(m.x,m.y);x.stroke()}
+  }
+  if(!still)requestAnimationFrame(draw);
+}
+addEventListener('resize',size);
+addEventListener('mousemove',e=>{m.x=e.clientX;m.y=e.clientY});
+addEventListener('mouseout',()=>{m.x=m.y=-999});
+col();size();if(!still)draw();
+})();
+
+function initCal(){
+  if(!window.Calendly)return;
+  const el=document.getElementById('cal'),dk=document.documentElement.getAttribute('data-theme')==='dark';
+  el.innerHTML='';
+  Calendly.initInlineWidget({url:'https://calendly.com/hm-abrar-ahmed/new-meeting?hide_gdpr_banner=1&background_color='+(dk?'000000':'ffffff')+'&text_color='+(dk?'ffffff':'10201a')+'&primary_color='+(dk?'3ddc97':'0b6b4f'),parentElement:el});
+}
+addEventListener('load',initCal);
+document.getElementById('y').textContent = new Date().getFullYear();
+const f = document.getElementById('cf'), msg = document.getElementById('msg');
+f.addEventListener('submit', async e => {
+  e.preventDefault();
+  msg.textContent = t('Sending…');
+  try {
+    const r = await fetch(f.action, {method:'POST', body:new FormData(f), headers:{Accept:'application/json'}});
+    if (r.ok) { f.reset(); msg.textContent = t('Thanks, your message was sent. We reply within one working day.'); }
+    else msg.textContent = t('Sending failed. Please email us directly.');
+  } catch (_) { msg.textContent = t('Network error. Please email us directly.'); }
+});
+</script>
+</body>
+</html>
